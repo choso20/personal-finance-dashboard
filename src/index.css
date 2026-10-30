@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
+  }
+  .input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-indigo-500/40 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-indigo-600 text-white hover:bg-indigo-500;
+  }
+  .btn-secondary {
+    @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700;
+  }
+  .btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800;
+  }
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-500;
+  }
+  .btn-sm {
+    @apply px-2 py-1 text-xs;
+  }
+  .label {
+    @apply mb-1 block text-xs font-medium text-slate-500 dark:text-slate-400;
+  }
+  .th {
+    @apply px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400;
+  }
+  .td {
+    @apply px-3 py-2 text-sm;
+  }
+}
+
+.recharts-default-tooltip {
+  @apply !rounded-lg !border-slate-200 !bg-white !shadow-lg dark:!border-slate-700 dark:!bg-slate-800;
+}
+.recharts-tooltip-label,
+.recharts-tooltip-item {
+  @apply !text-slate-700 dark:!text-slate-200;
+}

@@ -1,0 +1,2 @@
+* text=auto
+sample-data/*.csv -text
